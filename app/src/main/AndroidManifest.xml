@@ -33,9 +33,12 @@
         </intent>
     </queries>
 
+    <!-- fork: the backup rules (dataExtractionRules, fullBackupContent) are the fork's -->
     <application
         android:name="org.fossify.commons.FossifyApp"
         android:allowBackup="true"
+        android:dataExtractionRules="@xml/fork_data_extraction_rules"
+        android:fullBackupContent="@xml/fork_full_backup_content"
         android:appCategory="social"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_launcher_name"

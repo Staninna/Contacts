@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  fork: Seedvault backups. Everything the app stores is worth restoring: settings, and the
+  "phone storage (not visible by other apps)" contacts in the Room database. Nothing here is
+  re-downloadable or tied to this phone, so nothing is excluded.
+-->
+<data-extraction-rules>
+    <cloud-backup />
+    <device-transfer />
+</data-extraction-rules>
