@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.detekt)
+    alias(libs.plugins.fork.compose) // fork: Compose compiler
 }
 
 val keystorePropertiesFile: File = rootProject.file("keystore.properties")
@@ -28,7 +29,10 @@ base {
 }
 
 android {
-    compileSdk = project.libs.versions.app.build.compileSDKVersion.get().toInt()
+    // fork: Compose 1.13 needs the 37.2 SDK
+    compileSdk {
+        version = release(project.libs.versions.app.build.compileSDKVersion.get().toInt()) { minorApiLevel = 2 }
+    }
 
     defaultConfig {
         applicationId = project.property("APP_ID").toString()
@@ -63,6 +67,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        compose = true // fork: Compose UI
         buildConfig = true
     }
 
@@ -124,6 +129,8 @@ android {
         lintConfig = rootProject.file("lint.xml")
     }
 
+    testOptions { unitTests.isIncludeAndroidResources = true } // fork: Robolectric screenshot tests
+
     bundle {
         language {
             enableSplit = false
@@ -147,4 +154,20 @@ dependencies {
     implementation(libs.bundles.room)
     ksp(libs.androidx.room.compiler)
     detektPlugins(libs.compose.detekt)
+    // fork: Compose + Material 3 Expressive UI
+    implementation(libs.fork.compose.ui)
+    implementation(libs.fork.compose.foundation)
+    implementation(libs.fork.compose.animation)
+    implementation(libs.fork.compose.material3)
+    implementation(libs.fork.compose.icons)
+    implementation(libs.fork.compose.tooling.preview)
+    implementation(libs.fork.activity.compose)
+    implementation(libs.fork.lifecycle.viewmodel.compose)
+    implementation(libs.fork.lifecycle.runtime.compose)
+    implementation(libs.fork.graphics.shapes)
+    debugImplementation(libs.fork.compose.tooling)
+    debugImplementation(libs.fork.compose.ui.test.manifest)
+    testImplementation(libs.fork.junit)
+    testImplementation(libs.fork.robolectric)
+    testImplementation(libs.fork.compose.ui.test)
 }

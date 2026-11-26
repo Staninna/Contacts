@@ -6,3 +6,6 @@
 -keep class ezvcard.parameter.** {
     <init>(...);
 }
+
+# fork: the 37 SDK stubs drop FingerprintManager; Commons' app-lock library (reprint) still calls it on old phones
+-dontwarn android.hardware.fingerprint.**

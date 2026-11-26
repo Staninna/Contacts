@@ -77,6 +77,18 @@
             </intent-filter>
         </activity>
 
+        <!-- fork: Material 3 Expressive home and details screens -->
+        <activity
+            android:name=".fork.ui.home.ForkHomeActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".fork.ui.details.ForkContactActivity"
+            android:exported="false"
+            android:parentActivityName=".fork.ui.home.ForkHomeActivity" />
+
         <activity
             android:name=".activities.SettingsActivity"
             android:configChanges="orientation"

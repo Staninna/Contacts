@@ -48,6 +48,7 @@ class ViewContactActivity : ContactActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (org.fossify.contacts.fork.ForkUi.takeOverDetails(this)) return // fork: Compose details screen
         setContentView(binding.root)
 
         if (checkAppSideloading()) {

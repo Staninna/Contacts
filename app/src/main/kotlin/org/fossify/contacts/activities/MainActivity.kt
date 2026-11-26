@@ -53,6 +53,7 @@ class MainActivity : SimpleActivity(), RefreshContactsListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (org.fossify.contacts.fork.ForkUi.takeOverMain(this)) return // fork: Compose home screen
         setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
         setupOptionsMenu()

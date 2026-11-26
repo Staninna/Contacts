@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Strings added by the fork's Material 3 Expressive UI. -->
+<resources>
+    <string name="fork_search_contacts">Search contacts</string>
+    <string name="fork_clear_search">Clear search</string>
+    <string name="fork_more_options">More options</string>
+    <string name="fork_clear_selection">Clear selection</string>
+    <string name="fork_create_contact">New contact</string>
+    <string name="fork_back">Back</string>
+    <string name="fork_text">Text</string>
+    <string name="fork_permission_body">Allow access to contacts to see and manage the people in your address book. Nothing leaves your phone.</string>
+    <string name="fork_no_contacts_body">People you add, import or sync will show up here.</string>
+    <string name="fork_no_results_title">No matches</string>
+    <string name="fork_no_results_body">Nobody matches “%s”. Check the spelling, or try part of a name, number or email.</string>
+    <string name="fork_no_favorites_title">No favorites yet</string>
+    <string name="fork_no_favorites_body">Star the people you reach most and they’ll be one tap away.</string>
+    <string name="fork_no_groups_body">Groups let you text or email several people at once.</string>
+    <string name="fork_delete_contacts_body">This removes them from your phone and from the accounts they sync with.</string>
+    <string name="fork_delete_contact_title">Delete %s?</string>
+    <string name="fork_delete_contact_linked_body">This removes all %d linked entries from your phone and from the accounts they sync with.</string>
+    <string name="fork_contact_info">Contact info</string>
+    <string name="fork_connected_apps">Connected apps</string>
+    <string name="fork_about_contact">About</string>
+    <string name="fork_saved_in">Saved in</string>
+    <string name="fork_ringtone">Ringtone</string>
+    <string name="fork_today">Today</string>
+    <string name="fork_tomorrow">Tomorrow</string>
+
+    <plurals name="fork_selected_count">
+        <item quantity="one">%d selected</item>
+        <item quantity="other">%d selected</item>
+    </plurals>
+    <plurals name="fork_delete_contacts_title">
+        <item quantity="one">Delete %d contact?</item>
+        <item quantity="other">Delete %d contacts?</item>
+    </plurals>
+    <plurals name="fork_results_count">
+        <item quantity="one">%d match</item>
+        <item quantity="other">%d matches</item>
+    </plurals>
+    <plurals name="fork_favorites_count">
+        <item quantity="one">%d favorite</item>
+        <item quantity="other">%d favorites</item>
+    </plurals>
+    <plurals name="fork_group_members">
+        <item quantity="one">%d person</item>
+        <item quantity="other">%d people</item>
+    </plurals>
+    <plurals name="fork_in_days">
+        <item quantity="one">In %d day</item>
+        <item quantity="other">In %d days</item>
+    </plurals>
+    <plurals name="fork_turns">
+        <item quantity="one">turns %d</item>
+        <item quantity="other">turns %d</item>
+    </plurals>
+    <plurals name="fork_years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
+</resources>
